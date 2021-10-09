@@ -6,7 +6,7 @@ public class ValidatePassword {
     public static boolean validate(String str){
         String text="";
         if(str.length()<6) text+="\nYour password must be at least 6 characters";
-        if(str.contains(" ")) text+="\nYour password can't have space";
+        if(str.contains(" ")) text+="\nYour password can't have space";//update
         if(!str.matches("\\[A-Z]{1,}")) text+="\nYour password must have at least one upper case character";
         if(!str.matches("\\[a-z]{1,}")) text+="\nYour password must have at least one lower case character";
         if(str.replaceAll("\\w","").length()<1) text+="\nYour password must have at least one special character";
