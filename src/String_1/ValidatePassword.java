@@ -7,8 +7,8 @@ public class ValidatePassword {
         String text="";
         if(str.length()<6) text+="\nYour password must be at least 6 characters";
         if(str.contains(" ")) text+="\nYour password can't have space";//update
-        if(!str.matches("\\[A-Z]{1,}")) text+="\nYour password must have at least one upper case character";
-        if(!str.matches("\\[a-z]{1,}")) text+="\nYour password must have at least one lower case character";
+        if(str.replaceAll("[^A-Z]","").length()<1) text+="\nYour password must have at least one upper case character";
+        if(str.replaceAll("[^a-z]","").length()<1) text+="\nYour password must have at least one lower case character";
         if(str.replaceAll("\\w","").length()<1) text+="\nYour password must have at least one special character";
         if(str.replaceAll("\\D","").length()<1) text+="\nYour password must have at least one numeric character";
         if(text.length()<1) return true;
@@ -21,13 +21,10 @@ public class ValidatePassword {
         Scanner scan=new Scanner(System.in);
         String password="";
         do{
-
             System.out.println("Please enter a valid password!");
             password= scan.nextLine();
-
-
         } while(!validate(password));
-        System.out.println("Greate your password accepted!");
+        System.out.println("Great, your password accepted!");
         System.out.println("Your password is "+password);
     }
 }
