@@ -6,7 +6,7 @@ import Company.Tester;
 import java.util.ArrayList;
 
 public class ScrumTeam {
-    String PO, BA, SM;
+    String PO="Nadir", BA="Mike", SM="Saim";
     ArrayList<Tester> testers=new ArrayList<Tester>();
     ArrayList<Developer> developers=new ArrayList<Developer>();
     int sprintNumber;
@@ -15,7 +15,10 @@ public class ScrumTeam {
     public ScrumTeam(int sprintNumber) {
         this.sprintNumber = sprintNumber;
     }
-
+    static {
+        company="Cydeo";
+        CEO="Kuzzat";
+    }
     public ScrumTeam(String PO, String BA, String SM, ArrayList<Developer> developers, ArrayList<Tester> testers, int sprintNumber) {
         this.PO = PO;
         this.BA = BA;
@@ -46,6 +49,7 @@ public class ScrumTeam {
                 testers.remove(i);
             }
         }
+
     }
     public void removeDeveloper(long employeeID){
         for (int i = 0; i < developers.size(); i++) {
