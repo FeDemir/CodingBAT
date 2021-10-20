@@ -55,6 +55,18 @@ public class Solution {
         }
         return arr;
     }
+    public static String EvenOrOdd(int i){
+        return i%2==0 ? "Even":"Odd";
+    }
+    public static int Divide(int a, int b){
+      int count=0;
+        while(a>=b){
+            count++;
+            a-=b;
+        }
+        System.out.println("Remainder="+a);
+        return count;
+    }
     public static String[] add(String[] a, String[] b){
         //int n=a.length>b.length ? a.length: b.length;
         String[] arr=new String[a.length+b.length];
@@ -64,6 +76,7 @@ public class Solution {
         for (int i = 0; i < b.length; i++) {
             arr[a.length+i]=b[i];
         }
+
         return arr;
 
 
@@ -73,6 +86,9 @@ public class Solution {
         System.out.println(Arrays.toString(ConcatArrays(a.split(""),b.split(""))));
         System.out.println(Arrays.toString(ConcatArrays(new int[]{10,3,4,12,2},new int[]{0,0})));
         System.out.println(Arrays.toString(add(a.split(""),b.split(""))));
-
+        System.out.println(Divide(15,5));
+        System.out.println(Divide(1,5));
+        System.out.println(Divide(16,5));
+        System.out.println(Divide(0,5));
     }
 }
