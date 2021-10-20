@@ -1,5 +1,6 @@
 package String_1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ValidatePassword {
@@ -18,6 +19,10 @@ public class ValidatePassword {
         }
     }
     public static void main(String[] args) {
+//        int a=7;
+//        ArrayList<Integer> list=new ArrayList<>();
+//        list.add(a);
+//        System.out.println(list.remove(a));
         Scanner scan=new Scanner(System.in);
         String password="";
         do{
@@ -26,5 +31,6 @@ public class ValidatePassword {
         } while(!validate(password));
         System.out.println("Great, your password accepted!");
         System.out.println("Your password is "+password);
+
     }
 }
