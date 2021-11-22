@@ -10,36 +10,20 @@ public class Character {
         setAppearance(appearance);
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) {this.name = name;}
 
-    public String getOccupation() {
-        return occupation;
-    }
+    public String getOccupation() {return occupation;}
 
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
-    }
+    public void setOccupation(String occupation) {this.occupation = occupation;}
 
-    public int getAppearance() {
-        return appearance;
-    }
+    public int getAppearance() {return appearance;}
 
-    public void setAppearance(int appearance) {
-        this.appearance = appearance;
-    }
+    public void setAppearance(int appearance) {this.appearance = appearance;}
 
     @Override
     public String toString() {
-        return "Character{" +
-                "name='" + name + '\'' +
-                ", occupation='" + occupation + '\'' +
-                ", appearance=" + appearance +
-                '}';
+        return "Character{" + "name='" + name + '\'' + ", occupation='" + occupation + '\'' + ", appearance=" + appearance + '}';
     }
 }

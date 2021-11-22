@@ -25,9 +25,7 @@ public class SecondMost {
         return most;
     }
     public static int mostFrequent(int[] arr){
-        
-
         return Integer.parseInt(mostFrequent(Arrays.toString(arr).replaceAll("\\D",""))+"");
-
+        //mostfrequent method for string is above
     }
 }
